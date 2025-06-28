@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sri Laxminarayana Swamy Temple</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="script.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+
+
+  <style>
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+    .lightbox {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 8px;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body class="bg-orange-50 text-gray-800">
+  <header class="bg-orange-600 text-white sticky top-0 z-50">
+    <nav class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="text-xl font-bold">Sri Laxminarayana Swamy Temple</div>
+      <button id="menu-toggle" class="md:hidden text-white text-2xl">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul id="menu" class="hidden md:flex space-x-6 font-medium md:static absolute top-16 right-4 bg-orange-600 md:bg-transparent md:flex-row flex-col p-4 rounded shadow-lg md:shadow-none">
+        <li><a href="#home" class="hover:text-orange-200 block py-1">Home</a></li>
+        <li><a href="#about" class="hover:text-orange-200 block py-1">About</a></li>
+        <li><a href="#timings" class="hover:text-orange-200 block py-1">Darshan Timings</a></li>
+        <li><a href="#events" class="hover:text-orange-200 block py-1">Events</a></li>
+        <li><a href="#gallery" class="hover:text-orange-200 block py-1">Gallery</a></li>
+        <li><a href="#donate" class="hover:text-orange-200 block py-1">Donate</a></li>
+        <li><a href="#contact" class="hover:text-orange-200 block py-1">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+<section id="home"
+  class="relative h-[80vh] flex items-center justify-center bg-center bg-cover text-white"
+  style="background-image: url('./images/image2.jpg');">
+  
+  <div class="absolute inset-0 bg-black/50"></div>
+
+  <div class="relative z-10 text-center px-4">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">Welcome to Sri Laxminarayana Swamy Temple</h1>
+    <p class="text-lg md:text-xl">A sacred space of devotion and peace</p>
+  </div>
+</section>
+
+
+
+
+
+  <section id="about" class="max-w-5xl mx-auto py-16 px-4">
+    <h2 class="text-3xl text-orange-700 font-bold mb-4">About the Temple</h2>
+    <p class="text-lg leading-relaxed">Sri Laxminarayana Swamy Temple is a divine place known for its history, architecture, and deep spiritual presence. Dedicated to Lord Vishnu and Goddess Lakshmi, the temple has been a pillar of faith and culture for centuries.</p>
+  </section>
+
+  <section id="timings" class="max-w-5xl mx-auto py-16 px-4">
+    <h2 class="text-3xl text-orange-700 font-bold mb-4">Darshan Timings</h2>
+    <table class="w-full table-auto border border-gray-300 text-center mt-4">
+      <thead class="bg-orange-100">
+        <tr>
+          <th class="border px-4 py-2">Day</th>
+          <th class="border px-4 py-2">Morning</th>
+          <th class="border px-4 py-2">Evening</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="border px-4 py-2">Monday - Friday</td>
+          <td class="border px-4 py-2">6:00 AM - 11:00 AM</td>
+          <td class="border px-4 py-2">5:00 PM - 9:00 PM</td>
+        </tr>
+        <tr>
+          <td class="border px-4 py-2">Saturday - Sunday</td>
+          <td class="border px-4 py-2">5:30 AM - 12:00 PM</td>
+          <td class="border px-4 py-2">4:30 PM - 10:00 PM</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="events" class="max-w-5xl mx-auto py-16 px-4">
+    <h2 class="text-3xl text-orange-700 font-bold mb-4">Events & Festivals</h2>
+    <ul class="list-disc list-inside space-y-2 text-lg">
+      <li><strong>Vaikunta Ekadashi</strong> – Grand celebration with special poojas.</li>
+      <li><strong>Brahmotsavam</strong> – Annual festival with cultural events.</li>
+      <li><strong>Deepotsavam</strong> – Temple decorated with thousands of lamps.</li>
+    </ul>
+  </section>
+
+  <section id="gallery" class="max-w-6xl mx-auto py-16 px-4">
+    <h2 class="text-3xl text-orange-700 font-bold mb-4 text-center">Gallery</h2>
+    <div class="grid md:grid-cols-3 gap-4">
+      <img src="c:\TemplePhotos\WhatsApp Image 2025-06-28 at 16.33.34_652f21f9.jpg" alt="Temple View 1" class="rounded shadow cursor-pointer lightbox-img" />
+      <img src="c:\TemplePhotos\WhatsApp Image 2025-06-28 at 16.22.59_0859160d.jpg" alt="Festival" class="rounded shadow cursor-pointer lightbox-img" />
+      <img src="c:\TemplePhotos\WhatsApp Image 2025-06-28 at 16.31.15_717a7cb5.jpg" alt="Pooja Ritual" class="rounded shadow cursor-pointer lightbox-img" />
+    </div>
+  </section>
+
+  <div id="lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img id="lightbox-image" src="" alt="Preview" />
+  </div>
+
+  <section id="donate" class="max-w-5xl mx-auto py-16 px-4">
+    <h2 class="text-3xl text-orange-700 font-bold mb-4">Donate</h2>
+    <p class="text-lg mb-6">Your contributions help us maintain the temple and support our community outreach programs.</p>
+    <form id="donation-form" class="space-y-4 max-w-md">
+      <input type="text" placeholder="Full Name" required class="w-full p-3 border rounded" />
+      <input type="email" placeholder="Email" required class="w-full p-3 border rounded" />
+      <input type="number" placeholder="Amount (INR)" required class="w-full p-3 border rounded" />
+      <button type="submit" class="bg-orange-600 text-white px-6 py-3 rounded hover:bg-orange-700">Donate Now</button>
+    </form>
+  </section>
+
+  <section id="contact" class="max-w-5xl mx-auto py-16 px-4">
+    <h2 class="text-3xl text-orange-700 font-bold mb-4">Contact Us</h2>
+    <form id="contact-form" class="space-y-4 max-w-md">
+      <input type="text" placeholder="Your Name" required class="w-full p-3 border rounded" />
+      <input type="email" placeholder="Your Email" required class="w-full p-3 border rounded" />
+      <textarea placeholder="Your Message" required class="w-full p-3 border rounded h-32"></textarea>
+      <button type="submit" class="bg-orange-600 text-white px-6 py-3 rounded hover:bg-orange-700">Send Message</button>
+    </form>
+    <div class="mt-8">
+      <iframe class="w-full h-64" src="https://maps.google.com/maps?q=Hyderabad&t=&z=13&ie=UTF8&iwloc=&output=embed" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <footer class="bg-orange-600 text-white text-center py-4">
+    <p>&copy; 2025 Sri Laxminarayana Swamy Temple. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+      document.getElementById('menu').classList.toggle('hidden');
+    });
+
+    // Lightbox functionality
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-image');
+    const closeBtn = document.querySelector('.lightbox-close');
+    const galleryImages = document.querySelectorAll('.lightbox-img');
+
+    galleryImages.forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightbox.style.display = 'flex';
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+      lightboxImg.src = '';
+    });
+
+    lightbox.addEventListener('click', e => {
+      if (e.target === lightbox) {
+        lightbox.style.display = 'none';
+        lightboxImg.src = '';
+      }
+    });
+  </script>
+</body>
+</html>
