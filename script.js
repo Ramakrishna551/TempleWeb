@@ -15,3 +15,56 @@ document.addEventListener('DOMContentLoaded', () => {
     donationForm.reset();
   });
 });
+
+// gallery code 
+// Wait for DOM to load
+document.addEventListener("DOMContentLoaded", () => {
+  const tabs = document.querySelectorAll(".gallery-tab");
+  const sections = document.querySelectorAll(".gallery-section");
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const target = tab.getAttribute("data-target");
+
+      // Hide all sections
+      sections.forEach((section) => {
+        section.classList.add("hidden");
+      });
+
+      // Show selected section
+      const selectedSection = document.getElementById(target);
+      selectedSection.classList.remove("hidden");
+
+      // Optional: update button active styling
+      tabs.forEach((btn) => btn.classList.remove("bg-orange-800"));
+      tab.classList.add("bg-orange-800");
+    });
+  });
+
+  // Lightbox Logic
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImage = document.getElementById("lightbox-image");
+  const closeBtn = document.querySelector(".lightbox-close");
+
+  document.querySelectorAll(".lightbox-img").forEach((img) => {
+    img.addEventListener("click", () => {
+      lightboxImage.src = img.src;
+      lightbox.classList.add("fixed", "inset-0", "bg-black", "bg-opacity-75", "flex", "items-center", "justify-center", "z-50");
+      lightbox.classList.remove("hidden");
+    });
+  });
+
+  closeBtn.addEventListener("click", () => {
+    lightbox.classList.add("hidden");
+    lightbox.classList.remove("fixed", "inset-0", "bg-black", "bg-opacity-75", "flex", "items-center", "justify-center", "z-50");
+    lightboxImage.src = "";
+  });
+
+  // Hide lightbox when clicking outside the image
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+      closeBtn.click();
+    }
+  });
+});
+

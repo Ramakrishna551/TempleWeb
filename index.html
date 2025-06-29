@@ -44,6 +44,28 @@
       color: white;
       cursor: pointer;
     }
+
+    /* gallery code css */
+  #lightbox {
+    display: none;
+  }
+  #lightbox img {
+    max-width: 90%;
+    max-height: 80vh;
+  }
+  .lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+  }
+</style>
+
+
+
+
   </style>
 </head>
 
@@ -120,14 +142,63 @@
     </ul>
   </section>
 
-  <section id="gallery" class="max-w-6xl mx-auto py-16 px-4">
-    <h2 class="text-3xl text-orange-700 font-bold mb-4 text-center">Gallery</h2>
+<section id="gallery" class="max-w-6xl mx-auto py-16 px-4">
+  <h2 class="text-3xl text-orange-700 font-bold mb-8 text-center">Gallery</h2>
+
+  <!-- Category Buttons -->
+  <div class="flex flex-wrap justify-center gap-4 mb-8">
+    <!-- Add inside the Category Buttons -->
+    <button class="gallery-tab bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700" data-target="brahmotsavalu">Brahmotsavalu</button>
+    <button class="gallery-tab bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700" data-target="temple">Temple Views</button>
+    <button class="gallery-tab bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700" data-target="festivals">Festivals</button>
+    <button class="gallery-tab bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700" data-target="poojas">Pooja Rituals</button>
+
+  </div>
+
+
+  <!-- Brahmostavalu -->
+
+  <!-- Brahmotsavalu -->
+<div class="gallery-section hidden" id="brahmotsavalu">
+  <div class="grid md:grid-cols-3 gap-4">
+    <img src="./images/rathostvam.jpg" alt="Brahmotsavalu 1" class="rounded shadow cursor-pointer lightbox-img" />
+  </div>
+</div>
+
+
+  <!-- Temple Views -->
+<div class="gallery-section" id="temple">
+  <div class="grid md:grid-cols-3 gap-4">
+    <img src="./images/templepic.jpg" alt="Temple View 1" class="rounded shadow cursor-pointer lightbox-img" />
+  </div>
+</div>
+
+
+
+
+
+<!-- Festivals -->
+<div class="gallery-section hidden" id="festivals">
+  <div class="grid md:grid-cols-3 gap-4">
+    <img src="./images/festivalpic.jpg" alt="Festival 1" class="rounded shadow cursor-pointer lightbox-img" />
+    <img src="./images/festival2.jpg" alt="Festival 2" class="rounded shadow cursor-pointer lightbox-img" />
+  </div>
+</div>
+
+
+  <!-- Pooja Rituals -->
+  <div class="gallery-section hidden" id="poojas">
     <div class="grid md:grid-cols-3 gap-4">
-      <img src="c:\TemplePhotos\WhatsApp Image 2025-06-28 at 16.33.34_652f21f9.jpg" alt="Temple View 1" class="rounded shadow cursor-pointer lightbox-img" />
-      <img src="c:\TemplePhotos\WhatsApp Image 2025-06-28 at 16.22.59_0859160d.jpg" alt="Festival" class="rounded shadow cursor-pointer lightbox-img" />
-      <img src="c:\TemplePhotos\WhatsApp Image 2025-06-28 at 16.31.15_717a7cb5.jpg" alt="Pooja Ritual" class="rounded shadow cursor-pointer lightbox-img" />
-    </div>
-  </section>
+      <img src="./images/poojapic.jpg" alt="Pooja 1" class="rounded shadow cursor-pointer lightbox-img" />
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img id="lightbox-image" src="" alt="Preview" />
+  </div>
+</section>
+
 
   <div id="lightbox" class="lightbox">
     <span class="lightbox-close">&times;</span>
