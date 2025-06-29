@@ -235,36 +235,5 @@
   <footer class="bg-orange-600 text-white text-center py-4">
     <p>&copy; 2025 Sri Laxminarayana Swamy Temple. All rights reserved.</p>
   </footer>
-
-  <script>
-    document.getElementById('menu-toggle').addEventListener('click', () => {
-      document.getElementById('menu').classList.toggle('hidden');
-    });
-
-    // Lightbox functionality
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-image');
-    const closeBtn = document.querySelector('.lightbox-close');
-    const galleryImages = document.querySelectorAll('.lightbox-img');
-
-    galleryImages.forEach(img => {
-      img.addEventListener('click', () => {
-        lightboxImg.src = img.src;
-        lightbox.style.display = 'flex';
-      });
-    });
-
-    closeBtn.addEventListener('click', () => {
-      lightbox.style.display = 'none';
-      lightboxImg.src = '';
-    });
-
-    lightbox.addEventListener('click', e => {
-      if (e.target === lightbox) {
-        lightbox.style.display = 'none';
-        lightboxImg.src = '';
-      }
-    });
-  </script>
 </body>
 </html>

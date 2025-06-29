@@ -16,6 +16,54 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+      document.getElementById('menu').classList.toggle('hidden');
+    });
+
+    // Lightbox functionality
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-image');
+    const closeBtn = document.querySelector('.lightbox-close');
+    const galleryImages = document.querySelectorAll('.lightbox-img');
+
+    galleryImages.forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightbox.style.display = 'flex';
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+      lightboxImg.src = '';
+    });
+
+    lightbox.addEventListener('click', e => {
+      if (e.target === lightbox) {
+        lightbox.style.display = 'none';
+        lightboxImg.src = '';
+      }
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // gallery code 
 // Wait for DOM to load
 document.addEventListener("DOMContentLoaded", () => {
