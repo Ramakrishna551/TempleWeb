@@ -133,6 +133,162 @@
     </table>
   </section>
 
+
+
+
+  <!-- Book Seva's  -->
+   <section id="darshan-booking" class="max-w-5xl mx-auto py-16 px-4">
+  <h2 class="text-3xl text-orange-700 font-bold mb-4">Book Seva's</h2>
+
+  <!-- Seva Buttons -->
+  <div class="mb-6 grid gap-3 sm:grid-cols-2 md:grid-cols-3">
+    <button class="seva-btn bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700" data-seva="Abhishek Seva">Book Abhishek Seva</button>
+    <button class="seva-btn bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700" data-seva="Suprabhatam Seva">Book Suprabhatam Seva</button>
+    <button class="seva-btn bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700" data-seva="Thomala Seva">Book Thomala Seva</button>
+    <button class="seva-btn bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700" data-seva="Archana Seva">Book Archana Seva</button>
+    <button class="seva-btn bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700" data-seva="Kalyanotsavam Seva">Book Kalyanotsavam</button>
+    <button class="seva-btn bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700" data-seva="Sahasra Deepalankarana Seva">Book Sahasra Deepalankarana</button>
+    <button class="seva-btn bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700" data-seva="Ekantha Seva">Book Ekantha Seva</button>
+  </div>
+
+  <!-- Booking Form (initially hidden) -->
+  <form id="darshan-form" class="space-y-4 max-w-md hidden">
+    <h3 id="seva-title" class="text-xl font-semibold text-orange-700">Booking Form</h3>
+    <input type="text" placeholder="Full Name" required class="w-full p-3 border rounded" />
+    <input type="tel" placeholder="Mobile Number" required class="w-full p-3 border rounded" />
+    <input type="date" required class="w-full p-3 border rounded" />
+    <select required class="w-full p-3 border rounded">
+      <option value="" disabled selected>Select Time Slot</option>
+      <option value="morning">Morning (6:00 AM - 11:00 AM)</option>
+      <option value="evening">Evening (5:00 PM - 9:00 PM)</option>
+    </select>
+    <button type="submit" class="bg-orange-600 text-white px-6 py-3 rounded hover:bg-orange-700">Book Now</button>
+  </form>
+</section>
+
+
+<!-- Create daily sevas  -->
+
+<section id="daily-sevas" class="max-w-5xl mx-auto py-16 px-4">
+  <h2 class="text-3xl text-orange-700 font-bold mb-6">Daily Seva's</h2>
+
+  <!-- Seva Buttons -->
+  <div class="grid gap-3 sm:grid-cols-2 md:grid-cols-3 mb-6">
+    <button class="seva-btn bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700" data-seva="Suprabhata Seva">Suprabhata Seva</button>
+    <button class="seva-btn bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700" data-seva="Thomala Seva">Thomala Seva</button>
+    <button class="seva-btn bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700" data-seva="Archana">Archana</button>
+    <button class="seva-btn bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700" data-seva="Kalyanotsavam">Kalyanotsavam</button>
+    <button class="seva-btn bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700" data-seva="Arjitha Brahmotsavam">Arjitha Brahmotsavam</button>
+    <button class="seva-btn bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700" data-seva="Dolotsavam (Unjal Seva)">Dolotsavam (Unjal Seva)</button>
+    <button class="seva-btn bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700" data-seva="Ekantha Seva">Ekantha Seva</button>
+    <button class="seva-btn bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700" data-seva="Sahasra Deepalankarana Seva">Sahasra Deepalankarana Seva</button>
+  </div>
+
+  <!-- Booking Form (initially hidden) -->
+  <form id="seva-form" class="space-y-4 max-w-md hidden">
+    <h3 id="daily-seva-title" class="text-xl font-semibold text-orange-700">Seva Name</h3>
+    <input type="text" placeholder="Full Name" required class="w-full p-3 border rounded" />
+    <input type="tel" placeholder="Mobile Number" required class="w-full p-3 border rounded" />
+    <input type="date" required class="w-full p-3 border rounded" />
+    <select required class="w-full p-3 border rounded">
+      <option value="" disabled selected>Select Time Slot</option>
+      <option value="morning">Morning (6:00 AM - 11:00 AM)</option>
+      <option value="evening">Evening (5:00 PM - 9:00 PM)</option>
+    </select>
+    <button type="submit" class="bg-orange-600 text-white px-6 py-3 rounded hover:bg-orange-700">Book Now</button>
+  </form>
+</section>
+
+
+
+
+
+
+<!-- weekly sevas  -->
+ <section id="weekly-sevas" class="max-w-5xl mx-auto py-16 px-4">
+  <h2 class="text-3xl text-orange-700 font-bold mb-6">Weekly Seva's</h2>
+
+  <!-- Seva Buttons -->
+  <div class="grid gap-3 sm:grid-cols-2 md:grid-cols-3 mb-6">
+    <button class="weekly-seva-btn bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700" data-seva="Visesha Puja (Monday)">Visesha Puja (Monday)</button>
+    <button class="weekly-seva-btn bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700" data-seva="Ashtadala Pada Padmaradhana (Tuesday)">Ashtadala Pada Padmaradhana (Tuesday)</button>
+    <button class="weekly-seva-btn bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700" data-seva="Sahasra Kalasabhishekam (Wednesday)">Sahasra Kalasabhishekam (Wednesday)</button>
+    <button class="weekly-seva-btn bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700" data-seva="Tiruppavada Seva (Thursday)">Tiruppavada Seva (Thursday)</button>
+    <button class="weekly-seva-btn bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700" data-seva="Poolangi Seva (Thursday)">Poolangi Seva (Thursday)</button>
+    <button class="weekly-seva-btn bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700" data-seva="Abhishekam (Friday)">Abhishekam (Friday)</button>
+    <button class="weekly-seva-btn bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700" data-seva="Unjal Seva (Saturday)">Unjal Seva (Saturday)</button>"
+  </div>
+
+  <!-- Weekly Seva Booking Form (initially hidden) -->
+  <form id="weekly-seva-form" class="space-y-4 max-w-md hidden">
+    <h3 id="weekly-seva-title" class="text-xl font-semibold text-orange-700">Seva Name</h3>
+    <input type="text" placeholder="Full Name" required class="w-full p-3 border rounded" />
+    <input type="tel" placeholder="Mobile Number" required class="w-full p-3 border rounded" />
+    <input type="date" required class="w-full p-3 border rounded" />
+    <select required class="w-full p-3 border rounded">
+      <option value="" disabled selected>Select Time Slot</option>
+      <option value="morning">Morning (6:00 AM - 11:00 AM)</option>
+      <option value="evening">Evening (5:00 PM - 9:00 PM)</option>
+    </select>
+    <button type="submit" class="bg-orange-600 text-white px-6 py-3 rounded hover:bg-orange-700">Book Now</button>
+  </form>
+</section>
+
+
+
+<!-- Periodic sevas or Brhamostavam  -->
+
+<!-- Periodical Sevas -->
+<section id="periodical-sevas" class="max-w-5xl mx-auto py-16 px-4">
+  <h2 class="text-3xl text-orange-700 font-bold mb-6">Periodical Seva's Or Seva's of 
+     Brahmotsavam </h2>
+
+  <!-- Seva Buttons -->
+  <div class="grid gap-3 sm:grid-cols-2 md:grid-cols-3 mb-6">
+    <button class="periodical-seva-btn bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700" data-seva="Vasanthotsavam">Vasanthotsavam</button>
+    <button class="periodical-seva-btn bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700" data-seva="Padmavathi Parinayam">Padmavathi Parinayam</button>
+    <button class="periodical-seva-btn bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700" data-seva="Abhideyaka Abhishekam">Abhideyaka Abhishekam</button>
+    <button class="periodical-seva-btn bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700" data-seva="Pushpa Pallaki">Pushpa Pallaki</button>
+    <button class="periodical-seva-btn bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700" data-seva="Pushpa Yagam">Pushpa Yagam</button>
+    <button class="periodical-seva-btn bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700" data-seva="Koil Alwar Thirumanjanam">Koil Alwar Thirumanjanam</button>
+    <button class="periodical-seva-btn bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700" data-seva="Pavithrotsavams">Pavithrotsavams</button>
+  </div>
+
+  <!-- Booking Form (initially hidden) -->
+  <form id="periodical-seva-form" class="space-y-4 max-w-md hidden">
+    <h3 id="periodical-seva-title" class="text-xl font-semibold text-orange-700">Seva Name</h3>
+    <input type="text" placeholder="Full Name" required class="w-full p-3 border rounded" />
+    <input type="tel" placeholder="Mobile Number" required class="w-full p-3 border rounded" />
+    <input type="date" required class="w-full p-3 border rounded" />
+    <select required class="w-full p-3 border rounded">
+      <option value="" disabled selected>Select Time Slot</option>
+      <option value="morning">Morning (6:00 AM - 11:00 AM)</option>
+      <option value="evening">Evening (5:00 PM - 9:00 PM)</option>
+    </select>
+    <button type="submit" class="bg-orange-600 text-white px-6 py-3 rounded hover:bg-orange-700">Book Now</button>
+  </form>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <section id="events" class="max-w-5xl mx-auto py-16 px-4">
     <h2 class="text-3xl text-orange-700 font-bold mb-4">Events & Festivals</h2>
     <ul class="list-disc list-inside space-y-2 text-lg">
@@ -235,5 +391,7 @@
   <footer class="bg-orange-600 text-white text-center py-4">
     <p>&copy; 2025 Sri Laxminarayana Swamy Temple. All rights reserved.</p>
   </footer>
+
+
 </body>
 </html>

@@ -52,18 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 // gallery code 
 // Wait for DOM to load
 document.addEventListener("DOMContentLoaded", () => {
@@ -116,3 +104,86 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// Book Seva's Script code 
+  const sevaButtons = document.querySelectorAll(".seva-btn");
+  const form = document.getElementById("darshan-form");
+  const sevaTitle = document.getElementById("seva-title");
+
+  sevaButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const sevaName = button.getAttribute("data-seva");
+      sevaTitle.textContent = `Booking  ${sevaName}`;
+      form.classList.remove("hidden");
+      form.scrollIntoView({ behavior: "smooth" });
+    });
+  });
+
+  // Daily sevas Script code 
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const sevaButtons = document.querySelectorAll(".seva-btn"); // All seva buttons
+    const form = document.getElementById("seva-form");           // The hidden form
+    const sevaTitle = document.getElementById("daily-seva-title"); // The title in the form
+
+    if (!form || !sevaTitle) {
+      console.warn("Form or title element is missing!");
+      return;
+    }
+
+    sevaButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        const sevaName = button.getAttribute("data-seva");
+        sevaTitle.textContent = sevaName; // Update form title
+        form.classList.remove("hidden");  // Show form
+        form.scrollIntoView({ behavior: "smooth" }); // Scroll into view
+      });
+    });
+  });
+
+
+
+
+
+// Weekly sevas script code 
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const weeklySevaButtons = document.querySelectorAll(".weekly-seva-btn");
+    const weeklyForm = document.getElementById("weekly-seva-form");
+    const weeklyTitle = document.getElementById("weekly-seva-title");
+
+    if (!weeklyForm || !weeklyTitle) {
+      console.warn("Weekly Seva form or title element is missing!");
+      return;
+    }
+
+    weeklySevaButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        const sevaName = button.getAttribute("data-seva");
+        weeklyTitle.textContent = sevaName;
+        weeklyForm.classList.remove("hidden");
+        weeklyForm.scrollIntoView({ behavior: "smooth" });
+      });
+    });
+  });
+
+// Periodic or seva's of Brahmostavam script code 
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const sevaButtons = document.querySelectorAll(".periodical-seva-btn");
+    const form = document.getElementById("periodical-seva-form");
+    const title = document.getElementById("periodical-seva-title");
+
+    if (!form || !title) {
+      console.warn("Form or title element for Periodical Sevas is missing!");
+      return;
+    }
+
+    sevaButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        const sevaName = button.getAttribute("data-seva");
+        title.textContent = sevaName;
+        form.classList.remove("hidden");
+        form.scrollIntoView({ behavior: "smooth" });
+      });
+    });
+  });
