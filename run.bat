@@ -1,0 +1,13 @@
+@echo off
+echo Creating Virtual Environment...
+python -m venv venv
+
+echo Activating Virtual Environment...
+call venv\Scripts\activate.bat
+
+echo Installing required packages...
+pip install flask flask-cors
+
+echo Starting the backend server...
+python app.py
+pause

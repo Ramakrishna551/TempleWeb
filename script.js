@@ -1,19 +1,70 @@
-// Basic contact and donation form validation
+// Database storage utility using localStorage
+// Handle sending data to real SQLite DB Backend
+async function saveToDatabase(collection, data) {
+  try {
+    const response = await fetch('http://127.0.0.1:5000/api/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        type: collection,
+        data: data
+      })
+    });
+    
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    
+    const result = await response.json();
+    console.log(`Successfully saved to DB (${collection}):`, result);
+  } catch (error) {
+    console.error('Error saving to database:', error);
+    // You could fallback to localStorage here if needed, but for now we simply log the error.
+  }
+}
+
+// Handle generic form submission
+function handleFormSubmit(formId, collectionName, successMessage, specialTitleId = null) {
+  const form = document.getElementById(formId);
+  if (!form) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+    
+    // For seva forms, extract the dynamically set title
+    if (specialTitleId) {
+       const titleEl = document.getElementById(specialTitleId);
+       if (titleEl) {
+         data.sevaName = titleEl.textContent.replace('Booking ', '').trim();
+       }
+    }
+
+    saveToDatabase(collectionName, data);
+    alert(successMessage);
+    form.reset();
+    
+    // Hide the form again if it is a seva booking form
+    if (specialTitleId) {
+      form.classList.add('hidden');
+    }
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-  const contactForm = document.getElementById('contact-form');
-  const donationForm = document.getElementById('donation-form');
-
-  contactForm.addEventListener('submit', e => {
-    e.preventDefault();
-    alert('Thank you for contacting us! We will get back to you shortly.');
-    contactForm.reset();
-  });
-
-  donationForm.addEventListener('submit', e => {
-    e.preventDefault();
-    alert('Thank you for your donation! May you be blessed.');
-    donationForm.reset();
-  });
+  // Contact and Donate
+  handleFormSubmit('contact-form', 'Contacts', 'Thank you for contacting us! We will get back to you shortly.');
+  handleFormSubmit('donation-form', 'Donations', 'Thank you for your donation! May you be blessed.');
+  
+  // All Sevas
+  handleFormSubmit('darshan-form', 'BookSevas', 'Thank you for booking your Seva! May you be blessed.', 'seva-title');
+  handleFormSubmit('seva-form', 'DailySevas', 'Thank you for booking your Daily Seva!', 'daily-seva-title');
+  handleFormSubmit('weekly-seva-form', 'WeeklySevas', 'Thank you for booking your Weekly Seva!', 'weekly-seva-title');
+  handleFormSubmit('periodical-seva-form', 'PeriodicalSevas', 'Thank you for booking your Periodical Seva!', 'periodical-seva-title');
 });
 
     document.getElementById('menu-toggle').addEventListener('click', () => {
@@ -187,3 +238,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
+
+
+  

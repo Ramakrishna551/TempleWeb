@@ -108,6 +108,21 @@
     <p class="text-lg leading-relaxed">Sri Laxminarayana Swamy Temple is a divine place known for its history, architecture, and deep spiritual presence. Dedicated to Lord Vishnu and Goddess Lakshmi, the temple has been a pillar of faith and culture for centuries.</p>
   </section>
 
+
+   
+   <section id="about" class="max-w-5xl mx-auto py-16 px-4">
+    <h2 class="text-3xl text-orange-700 font-bold mb-4">History of the Temple</h2>
+    <p class="text-lg leading-relaxed">Sri Laxminarayana Swamy Temple is a divine place known for its history, architecture, and deep spiritual presence. Dedicated to Lord Vishnu and Goddess Lakshmi, the temple has been a pillar of faith and culture for centuries.</p>
+  </section>
+
+
+
+
+
+
+
+
+
   <section id="timings" class="max-w-5xl mx-auto py-16 px-4">
     <h2 class="text-3xl text-orange-700 font-bold mb-4">Darshan Timings</h2>
     <table class="w-full table-auto border border-gray-300 text-center mt-4">
@@ -137,7 +152,7 @@
 
 
   <!-- Book Seva's  -->
-   <section id="darshan-booking" class="max-w-5xl mx-auto py-16 px-4">
+  <section id="darshan-booking" class="max-w-5xl mx-auto py-16 px-4">
   <h2 class="text-3xl text-orange-700 font-bold mb-4">Book Seva's</h2>
 
   <!-- Seva Buttons -->
@@ -154,10 +169,10 @@
   <!-- Booking Form (initially hidden) -->
   <form id="darshan-form" class="space-y-4 max-w-md hidden">
     <h3 id="seva-title" class="text-xl font-semibold text-orange-700">Booking Form</h3>
-    <input type="text" placeholder="Full Name" required class="w-full p-3 border rounded" />
-    <input type="tel" placeholder="Mobile Number" required class="w-full p-3 border rounded" />
-    <input type="date" required class="w-full p-3 border rounded" />
-    <select required class="w-full p-3 border rounded">
+    <input type="text" name="fullName" placeholder="Full Name" required class="w-full p-3 border rounded" />
+    <input type="tel" name="mobile" placeholder="Mobile Number" required class="w-full p-3 border rounded" />
+    <input type="date" name="date" required class="w-full p-3 border rounded" />
+    <select name="timeSlot" required class="w-full p-3 border rounded">
       <option value="" disabled selected>Select Time Slot</option>
       <option value="morning">Morning (6:00 AM - 11:00 AM)</option>
       <option value="evening">Evening (5:00 PM - 9:00 PM)</option>
@@ -187,10 +202,10 @@
   <!-- Booking Form (initially hidden) -->
   <form id="seva-form" class="space-y-4 max-w-md hidden">
     <h3 id="daily-seva-title" class="text-xl font-semibold text-orange-700">Seva Name</h3>
-    <input type="text" placeholder="Full Name" required class="w-full p-3 border rounded" />
-    <input type="tel" placeholder="Mobile Number" required class="w-full p-3 border rounded" />
-    <input type="date" required class="w-full p-3 border rounded" />
-    <select required class="w-full p-3 border rounded">
+    <input type="text" name="fullName" placeholder="Full Name" required class="w-full p-3 border rounded" />
+    <input type="tel" name="mobile" placeholder="Mobile Number" required class="w-full p-3 border rounded" />
+    <input type="date" name="date" required class="w-full p-3 border rounded" />
+    <select name="timeSlot" required class="w-full p-3 border rounded">
       <option value="" disabled selected>Select Time Slot</option>
       <option value="morning">Morning (6:00 AM - 11:00 AM)</option>
       <option value="evening">Evening (5:00 PM - 9:00 PM)</option>
@@ -222,10 +237,10 @@
   <!-- Weekly Seva Booking Form (initially hidden) -->
   <form id="weekly-seva-form" class="space-y-4 max-w-md hidden">
     <h3 id="weekly-seva-title" class="text-xl font-semibold text-orange-700">Seva Name</h3>
-    <input type="text" placeholder="Full Name" required class="w-full p-3 border rounded" />
-    <input type="tel" placeholder="Mobile Number" required class="w-full p-3 border rounded" />
-    <input type="date" required class="w-full p-3 border rounded" />
-    <select required class="w-full p-3 border rounded">
+    <input type="text" name="fullName" placeholder="Full Name" required class="w-full p-3 border rounded" />
+    <input type="tel" name="mobile" placeholder="Mobile Number" required class="w-full p-3 border rounded" />
+    <input type="date" name="date" required class="w-full p-3 border rounded" />
+    <select name="timeSlot" required class="w-full p-3 border rounded">
       <option value="" disabled selected>Select Time Slot</option>
       <option value="morning">Morning (6:00 AM - 11:00 AM)</option>
       <option value="evening">Evening (5:00 PM - 9:00 PM)</option>
@@ -257,10 +272,10 @@
   <!-- Booking Form (initially hidden) -->
   <form id="periodical-seva-form" class="space-y-4 max-w-md hidden">
     <h3 id="periodical-seva-title" class="text-xl font-semibold text-orange-700">Seva Name</h3>
-    <input type="text" placeholder="Full Name" required class="w-full p-3 border rounded" />
-    <input type="tel" placeholder="Mobile Number" required class="w-full p-3 border rounded" />
-    <input type="date" required class="w-full p-3 border rounded" />
-    <select required class="w-full p-3 border rounded">
+    <input type="text" name="fullName" placeholder="Full Name" required class="w-full p-3 border rounded" />
+    <input type="tel" name="mobile" placeholder="Mobile Number" required class="w-full p-3 border rounded" />
+    <input type="date" name="date" required class="w-full p-3 border rounded" />
+    <select name="timeSlot" required class="w-full p-3 border rounded">
       <option value="" disabled selected>Select Time Slot</option>
       <option value="morning">Morning (6:00 AM - 11:00 AM)</option>
       <option value="evening">Evening (5:00 PM - 9:00 PM)</option>
@@ -365,9 +380,9 @@
     <h2 class="text-3xl text-orange-700 font-bold mb-4">Donate</h2>
     <p class="text-lg mb-6">Your contributions help us maintain the temple and support our community outreach programs.</p>
     <form id="donation-form" class="space-y-4 max-w-md">
-      <input type="text" placeholder="Full Name" required class="w-full p-3 border rounded" />
-      <input type="email" placeholder="Email" required class="w-full p-3 border rounded" />
-      <input type="number" placeholder="Amount (INR)" required class="w-full p-3 border rounded" />
+      <input type="text" name="fullName" placeholder="Full Name" required class="w-full p-3 border rounded" />
+      <input type="email" name="email" placeholder="Email" required class="w-full p-3 border rounded" />
+      <input type="number" name="amount" placeholder="Amount (INR)" required class="w-full p-3 border rounded" />
       <button type="submit" class="bg-orange-600 text-white px-6 py-3 rounded hover:bg-orange-700">Donate Now</button>
     </form>
   </section>
@@ -375,9 +390,9 @@
   <section id="contact" class="max-w-5xl mx-auto py-16 px-4">
     <h2 class="text-3xl text-orange-700 font-bold mb-4">Contact Us</h2>
     <form id="contact-form" class="space-y-4 max-w-md">
-      <input type="text" placeholder="Your Name" required class="w-full p-3 border rounded" />
-      <input type="email" placeholder="Your Email" required class="w-full p-3 border rounded" />
-      <textarea placeholder="Your Message" required class="w-full p-3 border rounded h-32"></textarea>
+      <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 border rounded" />
+      <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 border rounded" />
+      <textarea name="message" placeholder="Your Message" required class="w-full p-3 border rounded h-32"></textarea>
       <button type="submit" class="bg-orange-600 text-white px-6 py-3 rounded hover:bg-orange-700">Send Message</button>
     </form>
     <div class="mt-8">
